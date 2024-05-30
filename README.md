@@ -45,6 +45,3 @@ python run_crslab.py --config config/crs/mhim/htgredial.yaml -g 0 -s 1 -p -e 10
 ```
 
 The experiment results on our machine has been saved in `HyCoRec/log/`
-
-
-
