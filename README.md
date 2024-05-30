@@ -1,3 +1,6 @@
+The implementation of HyCoRec: Hypergraph-Enhanced Multi-Preference Learning for Alleviating Matthew Effect in Conversational Recommendation (ACL 2024)
+
+The code is partially referred to MHIM (https://github.com/RUCAIBox/MHIM.)
 
 ## Requirements
 
