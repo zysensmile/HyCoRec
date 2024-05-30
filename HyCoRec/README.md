@@ -1,3 +1,6 @@
+The implementation of HyCoRec: Hypergraph-Enhanced Multi-Preference Learning for Alleviating Matthew Effect in Conversational Recommendation (ACL 2024)
+
+The code is partially referred to [MHIM](https://github.com/RUCAIBox/MHIM) and the open-source CRS toolkit [CRSLab](https://github.com/RUCAIBox/CRSLab).
 
 
 ## Requirements
@@ -15,9 +18,9 @@ transformers==4.15.0
 
 [Google Drive](https://drive.google.com/drive/folders/1witl2Ga8pQzAsreQhj4QUH7TldzWKzLa?usp=sharing) | [百度网盘](https://pan.baidu.com/s/1WQoWOSrquIZtJz8AGfg9Cg?pwd=mhim)
 
-Please download the processed datasets from the above links, unzip `data_contrast.zip` and move it to `Contrast/`, unzip `data_mhim.zip` and move it to `MHIM/`.
+Please download the processed datasets from the above links, unzip `data_contrast.zip` and move it to `Contrast/`, unzip `data_mhim.zip` and move it to `HyCoRec/`.
 
-## Quick Start
+## Quick 
 
 ### Contrastive Pre-training
 
@@ -29,30 +32,16 @@ python run.py -d redial -g 0
 python run.py -d tgredial -g 0
 ```
 
-Then, move the `save/{dataset}/{#epoch}-epoch.pth` file to `MHIM/pretrain/{dataset}/`.
+Then, move the `save/{dataset}/{#epoch}-epoch.pth` file to `/pretrain/{dataset}/`.
 
-The pre-trained encoder on our machine has been saved as `MHIM/pretrain/{dataset}/10-epoch.pth`.
+The pre-trained encoder on our machine has been saved as `HyCoRec/pretrain/{dataset}/10-epoch.pth`.
 
 ### Running
 
 ```
-cd ../MHIM
+cd ../HyCoRec
 python run_crslab.py --config config/crs/mhim/hredial.yaml -g 0 -s 1 -p -e 10
 python run_crslab.py --config config/crs/mhim/htgredial.yaml -g 0 -s 1 -p -e 10
 ```
 
-The experiment results on our machine has been saved in `MHIM/log/`
-
-## Acknowledgement
-
-The implementation is based on the open-source CRS toolkit [CRSLab](https://github.com/RUCAIBox/CRSLab).
-
-```
-@inproceedings{shang2023mhim,
-  author = {Chenzhan Shang and Yupeng Hou and Wayne Xin Zhao and Yaliang Li and Jing Zhang},
-  title = {Multi-grained Hypergraph Interest Modeling for Conversational Recommendation},
-  booktitle = {{arXiv preprint arXiv:2305.04798}},
-  year = {2023}
-}
-```
-
+The experiment results on our machine has been saved in `HyCoRec/log/`
