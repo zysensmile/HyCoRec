@@ -1,6 +1,7 @@
 The implementation of HyCoRec: Hypergraph-Enhanced Multi-Preference Learning for Alleviating Matthew Effect in Conversational Recommendation (ACL 2024)
 
-The code is partially referred to MHIM (https://github.com/RUCAIBox/MHIM.) and is based on the open-source CRS toolkit [CRSLab](https://github.com/RUCAIBox/CRSLab).
+The code is partially referred to [MHIM](https://github.com/RUCAIBox/MHIM) and is based on the open-source CRS toolkit [CRSLab](https://github.com/RUCAIBox/CRSLab).
+
 
 ## Requirements
 
