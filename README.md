@@ -1,6 +1,6 @@
 The implementation of HyCoRec: Hypergraph-Enhanced Multi-Preference Learning for Alleviating Matthew Effect in Conversational Recommendation (ACL 2024)
 
-The code is partially referred to MHIM (https://github.com/RUCAIBox/MHIM.)
+The code is partially referred to MHIM (https://github.com/RUCAIBox/MHIM.) and is based on the open-source CRS toolkit [CRSLab](https://github.com/RUCAIBox/CRSLab).
 
 ## Requirements
 
@@ -45,16 +45,5 @@ python run_crslab.py --config config/crs/mhim/htgredial.yaml -g 0 -s 1 -p -e 10
 
 The experiment results on our machine has been saved in `HyCoRec/log/`
 
-## Acknowledgement
 
-The implementation is based on the open-source CRS toolkit [CRSLab](https://github.com/RUCAIBox/CRSLab).
-
-```
-@inproceedings{shang2023mhim,
-  author = {Chenzhan Shang and Yupeng Hou and Wayne Xin Zhao and Yaliang Li and Jing Zhang},
-  title = {Multi-grained Hypergraph Interest Modeling for Conversational Recommendation},
-  booktitle = {{arXiv preprint arXiv:2305.04798}},
-  year = {2023}
-}
-```
 
