@@ -23,7 +23,8 @@ cd HyCoRec/
 uv run run_edger.py -d redial
 ```
 
-Or download the whole dataset and item/entity/word edger from [here](https://drive.tokisakix.cn/share/EAOsjDMF)
+Or download the whole dataset and item/entity/word edger from [here](https://pan.quark.cn/s/7ccc30301942)       %[here](https://drive.tokisakix.cn/share/EAOsjDMF) 
+
 
 Place the dataset in path `HyCoRec/data`.
 
@@ -34,4 +35,5 @@ Run the crslab framework by followed command:
 ```bash
 cd HyCoRec/
 uv run run_crslab.py -c config/crs/hycorec/redial.yaml -g 0 -s 3407
+
 ```
