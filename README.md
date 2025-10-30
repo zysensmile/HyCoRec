@@ -1,47 +1,37 @@
-The implementation of HyCoRec: Hypergraph-Enhanced Multi-Preference Learning for Alleviating Matthew Effect in Conversational Recommendation (ACL 2024)
+# HyCoRec
 
-The code is partially referred to [MHIM](https://github.com/RUCAIBox/MHIM) and the open-source CRS toolkit [CRSLab](https://github.com/RUCAIBox/CRSLab).
+The implementation of HyCoRec: Hypergraph-Enhanced Multi-Preference Learning for Alleviating Matthew Effect in Conversational Recommendation (ACL 2024).
 
+![hycorec](assets/hycorec.png)
 
-## Requirements
+Our paper can be viewed at [here](https://aclanthology.org/2024.acl-long.138/)
 
-```
-python==3.8.12
-pytorch==1.10.1
-dgl==0.4.3
-cudatoolkit==10.2.89
-torch-geometric==2.0.3
-transformers==4.15.0
-```
+## Python venv
 
-## Datasets
+We use `uv` to manage HyCoRec's python venv. You can click this [url](https://docs.astral.sh/uv/) for more details about `uv`.
 
-https://pan.quark.cn/s/7ccc30301942
-
-Please download the processed datasets from the above links, unzip `data_contrast.zip` and move it to `Contrast/`, unzip `data_mhim.zip` and move it to `HyCoRec/`.
-
-## Quick 
-
-### Contrastive Pre-training
-
-Pre-train the R-GCN encoder:
-
-```
-cd Contrast
-python run.py -d redial -g 0
-python run.py -d tgredial -g 0
+```bash
+uv venv --python 3.12
 ```
 
-Then, move the `save/{dataset}/{#epoch}-epoch.pth` file to `/pretrain/{dataset}/`.
+## Dataset
 
-The pre-trained encoder on our machine has been saved as `HyCoRec/pretrain/{dataset}/10-epoch.pth`.
+The dataset will be automatically download after you run the repo's code. However, the item/entity/word edger should be built by followed command:
 
-### Running
-
-```
-cd ../HyCoRec
-python run_crslab.py --config config/crs/mhim/hredial.yaml -g 0 -s 1 -p -e 10
-python run_crslab.py --config config/crs/mhim/htgredial.yaml -g 0 -s 1 -p -e 10
+```bash
+cd HyCoRec/
+uv run run_edger.py -d redial
 ```
 
-The experiment results on our machine has been saved in `HyCoRec/log/`
+Or download the whole dataset and item/entity/word edger from [here](https://drive.tokisakix.cn/share/EAOsjDMF)
+
+Place the dataset in path `HyCoRec/data`.
+
+## How to run
+
+Run the crslab framework by followed command:
+
+```bash
+cd HyCoRec/
+uv run run_crslab.py -c config/crs/hycorec/redial.yaml -g 0 -s 3407
+```
